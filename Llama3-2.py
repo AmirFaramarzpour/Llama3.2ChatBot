@@ -45,13 +45,14 @@ if __name__ == "__main__":
     app = ctk.CTk()
     app.title("Ollama Llama 3.2 Chat")
     app.geometry("400x400")
+    app.resizable(False,False)
 
     # Labels
     chat_history_label = ctk.CTkLabel(app, text="Chat History")
     chat_history_label.pack(pady=(10, 0))
 
     # Set up the chat history area
-    chat_history = ctk.CTkTextbox(app, wrap=ctk.WORD, width=380, height=200)
+    chat_history = ctk.CTkTextbox(app, wrap=ctk.WORD, width=380, height=150)
     chat_history.pack(padx=10, pady=10)
     chat_history.configure(state=ctk.DISABLED)
 
